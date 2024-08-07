@@ -44,7 +44,7 @@ const App = () => {
               'Cimawebas', 'Mycima.net', 'Tuktukcinema', 'Ahwaktv',
               'Movizlands', 'Qfilm.tv', 'Asia2tv', 'Cimalina'
            ,'Dramanice','Kiss Asian','Dramacool' ]} />} />
-            <Route path="/websitesList" element={<WebsitesList isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} /> {/* New route for WebsitesList */}
+            <Route path="/websitesList" element={<WebsitesList isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
           </Routes>
         </main>
         <Footer isDarkMode={isDarkMode} />
