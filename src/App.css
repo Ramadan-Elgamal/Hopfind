@@ -1,0 +1,13 @@
+/* App.css */
+
+body.dark-mode {
+  background-color: #1a202c; /* Dark background */
+  color: #f3f4f6; /* Light text color */
+}
+
+body.light-mode {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Dark text color */
+}
+
+/* Additional styles for dark mode can be added as needed */
