@@ -17,7 +17,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <header className={`p-4 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-blue-600 text-white'}`}>
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">HopScan</h1>
+        <h1 className="text-2xl font-bold">HopFind</h1>
         <div className='flex gap-4 items-center'>
           <button
             className="flex items-center px-2 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"

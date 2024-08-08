@@ -4,15 +4,16 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Search from './components/Search';
-import Footer from './components/Footer.jsx'
+import Footer from './components/Footer';
 import WebsitesList from './pages/WebsitesList'; // Import the new WebsitesList component
+import GuideSection from './components/GuideSection'; // Import the GuideSection component
 import './App.css';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-  const storedMode = localStorage.getItem('darkMode');
-  return storedMode === 'true'; // Convert to boolean
-});
+    const storedMode = localStorage.getItem('darkMode');
+    return storedMode === 'true'; // Convert to boolean
+  });
 
   // Load dark mode preference from localStorage
   useEffect(() => {
@@ -24,9 +25,9 @@ const App = () => {
 
   // Save dark mode preference to localStorage
   useEffect(() => {
-  localStorage.setItem('darkMode', isDarkMode.toString());
-  document.body.classList.toggle('dark-mode', isDarkMode);
-}, [isDarkMode]);
+    localStorage.setItem('darkMode', isDarkMode.toString());
+    document.body.classList.toggle('dark-mode', isDarkMode);
+  }, [isDarkMode]);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -38,12 +39,23 @@ const App = () => {
         <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <main className="">
           <Routes>
-            <Route path="/" element={<Search isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} searchEngines={[
-              'Soap2day','F2movies','Cineb', 'Look2movie movies', 'Look2movie series', 'Topcinema',
-              'Shahid4u', 'Fushaar', 'Arabseed', 'Faselvip', 'Weecima',
-              'Cimawebas', 'Mycima.net', 'Tuktukcinema', 'Ahwaktv',
-              'Movizlands', 'Qfilm.tv', 'Asia2tv', 'Cimalina'
-           ,'Dramanice','Kiss Asian','Dramacool' ]} />} />
+            <Route path="/" element={
+              <>
+                <GuideSection isDarkMode={isDarkMode} /> {/* Add the GuideSection here */}
+                <Search 
+                  isDarkMode={isDarkMode} 
+                  toggleDarkMode={toggleDarkMode} 
+                  searchEngines={[
+                    'Soap2day', 'F2movies', 'Cineb', 'Look2movie movies', 
+                    'Look2movie series', 'Topcinema', 'Shahid4u', 
+                    'Fushaar', 'Arabseed', 'Faselvip', 'Weecima', 
+                    'Cimawebas', 'Mycima.net', 'Tuktukcinema', 'Ahwaktv', 
+                    'Movizlands', 'Qfilm.tv', 'Asia2tv', 'Cimalina', 
+                    'Dramanice', 'Kiss Asian', 'Dramacool'
+                  ]} 
+                />
+              </>
+            } />
             <Route path="/websitesList" element={<WebsitesList isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
           </Routes>
         </main>
