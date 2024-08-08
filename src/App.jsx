@@ -48,9 +48,9 @@ const App = () => {
                   searchEngines={[
                     'Soap2day', 'F2movies', 'Cineb', 'Look2movie movies', 
                     'Look2movie series', 'Topcinema', 'Shahid4u', 
-                    'Fushaar', 'Arabseed', 'Faselvip', 'Weecima', 
-                    'Cimawebas', 'Mycima.net', 'Tuktukcinema', 'Ahwaktv', 
-                    'Movizlands', 'Qfilm.tv', 'Asia2tv', 'Cimalina', 
+                    'Fushaar', 'Arabseed', 'Weecima', 
+                    'Cimawebas', 'Tuktukcinema', 'Ahwaktv', 
+                    'Movizlands', 'Asia2tv', 'Cimalina', 
                     'Dramanice', 'Kiss Asian', 'Dramacool'
                   ]} 
                 />

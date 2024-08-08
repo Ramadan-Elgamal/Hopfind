@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const engines = [
-  'Topcinema','Shahid4u','Cimawebas','Tuktukcinema','Soap2day', 'Look2movie movies','Cineb', 'F2movies', 'Fushaar', 'Arabseed', 'Faselvip', 'Weecima','Mycima.net','Ahwaktv','Movizlands', 'Qfilm.tv','Look2movie series', 'Asia2tv',
+  'Topcinema','Shahid4u','Cimawebas','Tuktukcinema','Soap2day', 'Look2movie movies','Cineb', 'F2movies', 'Fushaar', 'Arabseed', 'Weecima','Ahwaktv','Movizlands','Look2movie series', 'Asia2tv',
   'Cimalina','Dramanice','kiss Asian','Dramacool'
 ];
 
@@ -43,17 +43,11 @@ const useSearch = () => {
       case 'Arabseed':
         searchUrl = `https://f1.arabseed.ink/find/?find=${encodeURIComponent(searchTerm)}`;
         break;
-      case 'Faselvip':
-        searchUrl = `https://www.faselhd.club/?s=${encodeURIComponent(searchTerm)}`;
-        break;
       case 'Weecima':
         searchUrl = `https://wecima.tube/search/${encodeURIComponent(searchTerm)}`;
         break;
       case 'Cimawebas':
         searchUrl = `https://cimawbas.mycima.cc/search.php?keywords=${encodeURIComponent(searchTerm)}&video-id=`;
-        break;
-      case 'Mycima.net':
-        searchUrl = `https://w27.my-cima.net/tag.php?t=${encodeURIComponent(searchTerm)}`;
         break;
       case 'Tuktukcinema':
         searchUrl = `https://tuktukcinema.net/?s=${encodeURIComponent(searchTerm)}`;
@@ -63,9 +57,6 @@ const useSearch = () => {
         break;
       case 'Movizlands':
         searchUrl = `https://movizlands.com/?s=${encodeURIComponent(searchTerm)}`;
-        break;
-      case 'Qfilm.tv':
-        searchUrl = `https://www.qfilm.tv/?s=${encodeURIComponent(searchTerm)}`;
         break;
       case 'Asia2tv':
         searchUrl = `https://ww1.asia2tv.pw/?s=${encodeURIComponent(searchTerm)}`;
