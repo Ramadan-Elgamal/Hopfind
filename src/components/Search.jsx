@@ -57,10 +57,6 @@ const Search = ({ isDarkMode, toggleDarkMode, searchEngines }) => {
     }, 1000); // Simulate a 1-second loading time
   };
 
-  const containerClasses = `p-6 shadow-md ${
-    isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-100'
-  }`;
-
   const inputClasses = `w-full p-4 border focus:outline-none focus:ring-2 transition duration-200 relative ${
     isDarkMode
       ? 'bg-gray-700 border-gray-600 focus:ring-blue-500'
@@ -68,7 +64,9 @@ const Search = ({ isDarkMode, toggleDarkMode, searchEngines }) => {
   }`;
 
   return (
-    <div className={containerClasses}>
+    <div className={`p-6 rounded-md shadow-md transition-all duration-300 ${
+      isDarkMode ? 'bg-[#1a1a1a] text-[#f2f2f2]' : 'bg-white text-[#333333]'
+    }`}>
       <SearchableDropdown
         options={searchEngines}
         selectedOption={selectedEngine}

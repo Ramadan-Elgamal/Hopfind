@@ -42,7 +42,9 @@ const WebsitesList = ({ isDarkMode }) => {
   ];
 
   const renderList = (title, items) => (
-    <div className="mb-8">
+    <div className={`p-6 rounded-md shadow-md transition-all duration-300 ${
+      isDarkMode ? 'bg-[#1a1a1a] text-[#f2f2f2]' : 'bg-white text-[#333333]'
+    }`}>
       <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{title}</h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {items.map((site) => (
@@ -71,8 +73,8 @@ const WebsitesList = ({ isDarkMode }) => {
   );
 
   return (
-    <div className={`p-6 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white'}`}>
-      <h2 className={`text-3xl text-center font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Websites List</h2>
+    <div className={` ${isDarkMode ? 'bg-[#1a1a1a] text-white' : 'bg-white'}`}>
+      <h2 className={`text-3xl text-center font-bold my-6 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Websites List</h2>
       {renderList('Global Websites', globalWebsites)}
       {renderList('Arabic Websites', arabicWebsites)}
       {renderList('Asian Cinema', asianCinema)}

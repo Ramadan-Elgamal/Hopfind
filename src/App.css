@@ -1,13 +1,24 @@
-/* App.css */
-
-body.dark-mode {
-  background-color: #1a202c; /* Dark background */
-  color: #f3f4f6; /* Light text color */
+body {
+  font-family: 'Roboto', sans-serif; /* For body text */
+  background-color: #ffffff; /* Set a default background color */
+  color: #333333; /* Set a default text color */
 }
 
-body.light-mode {
-  background-color: #ffffff; /* Light background */
-  color: #000000; /* Dark text color */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif; /* For headings */
 }
 
-/* Additional styles for dark mode can be added as needed */
+p {
+  font-weight: 400; /* Regular weight for paragraphs */
+}
+
+h1 {
+  font-weight: 700; /* Bold weight for h1 */
+}
+
+h2 {
+  font-weight: 600; /* Semi-bold weight for h2 */
+}
+
+/* Add any additional styles as needed */
+

@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <div className={`App ${isDarkMode ? 'bg-[#1a1a1a] text-[#f2f2f2]' : 'bg-white text-[#333333]'}`}>
         <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <main className="">
           <Routes>

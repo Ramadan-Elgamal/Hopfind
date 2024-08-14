@@ -4,7 +4,9 @@ import React from 'react';
 
 const Footer = ({ isDarkMode }) => {
   return (
-    <footer className={`py-4 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}>
+    <footer className={`p-4 text-center transition-all duration-300 ${
+      isDarkMode ? 'bg-[#1a1a1a] text-[#f2f2f2]' : 'bg-white text-[#333333]'
+    }`}>
       <div className="container mx-auto text-center">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} My App. All rights reserved.
